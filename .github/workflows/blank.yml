@@ -18,10 +18,3 @@ jobs:
               repo: context.repo.repo,
               body: "You've created this issue comment using GitHub Script!!!"
             });
-
-            // Create a project card (replace column_id with actual value)
-            await github.rest.projects.createCard({
-              column_id: 12345678, // Replace with your column ID
-              content_id: context.payload.issue.id,
-              content_type: "Issue"
-            });
